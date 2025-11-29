@@ -20,11 +20,11 @@ export class CreateEmployee {
   ){}
 
   saveEmployee(){
-    this.employeeService.createEmployee(this.employee).subscribe(data =>{
+    this.employeeService.createEmployee(this.employee).subscribe((data: any) =>{
       console.log(data);
       this.goToEmployeeList();
     },
-  error=>console.log(error));
+      (  error: any)=>console.log(error));
   }
   goToEmployeeList(){
 
@@ -36,5 +36,6 @@ export class CreateEmployee {
     this.saveEmployee();
 
   }
+
 
 }
